@@ -1,8 +1,8 @@
 <?php
 
-    $con = mysqli_connect("localhost","root","1234","sqlDB")or die("MySQL 접속 실패!");
+    $con = mysqli_connect("localhost","root","1234","tabledb")or die("MySQL 접속 실패!");
 
-    $sql = "SELECT * FROM userTBL";
+    $sql = "SELECT * FROM usertbl";
 
     $ret = mysqli_query($con,$sql);
     if($ret){
@@ -23,6 +23,7 @@
 
     while($row=mysqli_fetch_array($ret)){
         echo "<TR>";
+        echo "<TD>",$row['userID'],"</TD>";
         echo "<TD>",$row['name'],"</TD>";
         echo "<TD>",$row['birthYear'],"</TD>";
         echo "<TD>",$row['addr'],"</TD>";

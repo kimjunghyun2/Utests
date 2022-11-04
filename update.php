@@ -1,8 +1,8 @@
 <?php
-    $con = mysqli_connect("localhost","root","1234","sqldb")or die("Mysql 접속 실패!");
+    $con = mysqli_connect("localhost","root","1234","tabledb")or die("Mysql 접속 실패!");
 
     $sql ="
-        SELECT * FROM userTBL WHERE userID='".$_GET['userID']."'
+        SELECT * FROM usertbl WHERE userID='".$_GET['userID']."'
         ";
 
         $ret = mysqli_query($con,$sql);
@@ -23,14 +23,14 @@
         
         $row = mysqli_fetch_array($ret);
 
-        $userID = $_POST["userID"];
-        $name = $_POST["name"];
-        $birthYear = $_POST["birthYear"];
-        $addr = $_POST["addr"];
-        $moblie1 = $_POST["moblie1"];
-        $moblie2 = $_POST["moblie2"];
-        $height = $_POST["height"];
-        $mDate = date("Y-m-g");
+        $userID = $row["userID"];
+        $name = $row["name"];
+        $birthYear = $row["birthYear"];
+        $addr = $row["addr"];
+        $moblie1 = $row["moblie1"];
+        $moblie2 = $row["moblie2"];
+        $height = $row["height"];
+        $mDate = $row["mDate"];
 
 ?>
 
@@ -40,6 +40,7 @@
     </HEAD>
     <body>
 
+        <h1>회원 정보 수정 </h1>
         <form method="post" action = "update_result.php">
             아이디 : <input type="text"name ="userID" value=<?php echo $userID ?>READONLY><br>
             이름 : <input type="text"name ="name" value=<?php echo $name ?>><br>

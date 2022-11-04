@@ -1,8 +1,8 @@
 <?php
-    $con = mysqli_connect("localhost","root","1234","sqldb")or die("Mysql 접속 실패!");
+    $con = mysqli_connect("localhost","root","1234","tabledb")or die("Mysql 접속 실패!");
 
     $sql ="
-        SELECT * FROM userTBL WHERE userID='".$_GET['userID']."'
+        SELECT * FROM usertbl WHERE userID='".$_GET['userID']."'
         ";
 
         $ret = mysqli_query($con,$sql);

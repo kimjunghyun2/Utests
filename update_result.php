@@ -1,5 +1,5 @@
 <?php
-    $con = mysqli_connect("localhost","root","1234","sqldb")or die("Mysql 접속 실패!");
+    $con = mysqli_connect("localhost","root","1234","tabledb")or die("Mysql 접속 실패!");
 
 
 
@@ -15,7 +15,7 @@
         $moblie1 = $_POST["moblie1"];
         $moblie2 = $_POST["moblie2"];
         $height = $_POST["height"];
-        $mDate = date("Y-m-g");
+        $mDate = $_POST['mDate'];
 
         $sql ="
         update userTBL SET name='".$name."',birthYear='".$birthYear."',addr='".$addr."',moblie1='".$moblie1."',moblie2='".$moblie2."',height='".$height."',mDate='".$mDate."' WHERE userID= '".$userID."'
