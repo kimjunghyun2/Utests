@@ -1,17 +1,17 @@
 <?php
 
-    $con=mysqli_connect("localhost","root","1234","sqlDB")or die("MySQL 접속 실패!");
+    $con=mysqli_connect("localhost","root","1234","tabledb")or die("MySQL 접속 실패!");
 
     $userID = $_POST["userID"];
     $name = $_POST["name"];
     $birthYear = $_POST["birthYear"];
     $addr = $_POST["addr"];
-    $moblie1 = $_POST["moblie1"];
-    $moblie2 = $_POST["moblie2"];
+    $mobile1 = $_POST["mobile1"];
+    $mobile2 = $_POST["mobile2"];
     $height = $_POST["height"];
     $mDate = date("Y-m-g");
 
-    $sql="insert into userTBL VALUES('".$userID."','".$name."','".$birthYear."','".$addr."','".$moblie1."','".$moblie2."','".$height."','".$mDate."')";
+    $sql="insert into usertbl VALUES('".$userID."','".$name."','".$birthYear."','".$addr."','".$mobile1."','".$mobile2."','".$height."','".$mDate."')";
 
     $ret = mysqli_query($con,$sql);
 
@@ -23,6 +23,6 @@
     }
     mysqli_close($con);
 
-    echo "<br><a href-'main.html'><--초기화면</a>";
+    echo "<br><a href='main.html'><--초기화면</a>";
 
 ?>

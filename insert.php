@@ -10,7 +10,7 @@
             이름 : <input type = "text" NAME = "name"><br>
             출생년도 : <input type = "text" NAME = "birthYear"><br>
             지역 : <input type = "text" NAME = "addr"><br>
-            HP 앞번호 : <input type = "text" NAME = "moblie1"><br>
+            HP 앞번호 : <input type = "text" NAME = "mobile1"><br>
             HP 뒷번호 : <input type = "text" NAME = "mobile2"><br>
             신장 : <input type = "text" NAME = "height"><br>
             <BR><BR>

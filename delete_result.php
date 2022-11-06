@@ -1,8 +1,6 @@
 <?php
     $con = mysqli_connect("localhost","root","1234","tabledb")or die("Mysql 접속 실패!");
 
-        $ret = mysqli_query($con,$sql);
-
         $userID = $_POST["userID"];
 
         $sql ="

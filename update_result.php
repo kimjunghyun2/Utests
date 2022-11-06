@@ -1,24 +1,17 @@
 <?php
     $con = mysqli_connect("localhost","root","1234","tabledb")or die("Mysql 접속 실패!");
 
-
-
-        $ret = mysqli_query($con,$sql);
-
-
-        
-
         $userID = $_POST["userID"];
         $name = $_POST["name"];
         $birthYear = $_POST["birthYear"];
         $addr = $_POST["addr"];
-        $moblie1 = $_POST["moblie1"];
-        $moblie2 = $_POST["moblie2"];
+        $mobile1 = $_POST["mobile1"];
+        $mobile2 = $_POST["mobile2"];
         $height = $_POST["height"];
         $mDate = $_POST['mDate'];
 
         $sql ="
-        update userTBL SET name='".$name."',birthYear='".$birthYear."',addr='".$addr."',moblie1='".$moblie1."',moblie2='".$moblie2."',height='".$height."',mDate='".$mDate."' WHERE userID= '".$userID."'
+        update usertbl SET name='".$name."',birthYear='".$birthYear."',addr='".$addr."',mobile1='".$mobile1."',mobile2='".$mobile2."',height='".$height."',mDate='".$mDate."' WHERE userID= '".$userID."'
         ";
 
         $ret = mysqli_query($con,$sql);
